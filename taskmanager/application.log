@@ -1,0 +1,102 @@
+2025-10-30T20:43:00.304+05:30  INFO 14028 --- [restartedMain] c.t.TaskmanagerBackendApplication        : Starting TaskmanagerBackendApplication using Java 25.0.1 with PID 14028 (C:\Users\ajay ramasamy j\Downloads\taskmanager\target\classes started by ajay ramasamy j in C:\Users\ajay ramasamy j\Downloads\taskmanager)
+2025-10-30T20:43:00.305+05:30  INFO 14028 --- [restartedMain] c.t.TaskmanagerBackendApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-10-30T20:43:00.768+05:30  INFO 14028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-30T20:43:00.819+05:30  INFO 14028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 2 JPA repository interfaces.
+2025-10-30T20:43:01.088+05:30  INFO 14028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-30T20:43:01.089+05:30  INFO 14028 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-30T20:43:01.090+05:30  INFO 14028 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-10-30T20:43:01.146+05:30  INFO 14028 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-10-30T20:43:01.148+05:30  INFO 14028 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 840 ms
+2025-10-30T20:43:01.218+05:30 ERROR 14028 --- [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in file [C:\Users\ajay ramasamy j\Downloads\taskmanager\target\classes\com\taskmanager\config\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userService' defined in file [C:\Users\ajay ramasamy j\Downloads\taskmanager\target\classes\com\taskmanager\service\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.taskmanager.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+2025-10-30T20:43:01.221+05:30  INFO 14028 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-10-30T20:43:01.226+05:30  WARN 14028 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2025-10-30T20:43:01.233+05:30  INFO 14028 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-30T20:43:01.248+05:30 ERROR 14028 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'spring.jpa.show-sql' to boolean:
+
+    Property: spring.jpa.show-sql
+    Value: "false  # Disable in production for better performance"
+    Origin: class path resource [application.properties] - 9:21
+    Reason: failed to convert java.lang.String to boolean (caused by java.lang.IllegalArgumentException: Invalid boolean value 'false  # Disable in production for better performance')
+
+Action:
+
+Update your application's configuration
+
+2025-10-30T20:43:49.245+05:30  INFO 14028 --- [restartedMain] c.t.TaskmanagerBackendApplication        : Starting TaskmanagerBackendApplication using Java 25.0.1 with PID 14028 (C:\Users\ajay ramasamy j\Downloads\taskmanager\target\classes started by ajay ramasamy j in C:\Users\ajay ramasamy j\Downloads\taskmanager)
+2025-10-30T20:43:49.245+05:30  INFO 14028 --- [restartedMain] c.t.TaskmanagerBackendApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-10-30T20:43:49.614+05:30  INFO 14028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-30T20:43:49.651+05:30  INFO 14028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 2 JPA repository interfaces.
+2025-10-30T20:43:49.865+05:30  INFO 14028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-30T20:43:49.866+05:30  INFO 14028 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-30T20:43:49.867+05:30  INFO 14028 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-10-30T20:43:49.921+05:30  INFO 14028 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-10-30T20:43:49.922+05:30  INFO 14028 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 673 ms
+2025-10-30T20:43:49.962+05:30 ERROR 14028 --- [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in file [C:\Users\ajay ramasamy j\Downloads\taskmanager\target\classes\com\taskmanager\config\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userService' defined in file [C:\Users\ajay ramasamy j\Downloads\taskmanager\target\classes\com\taskmanager\service\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.taskmanager.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+2025-10-30T20:43:49.965+05:30  INFO 14028 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-10-30T20:43:49.969+05:30  WARN 14028 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2025-10-30T20:43:49.974+05:30  INFO 14028 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-30T20:43:49.990+05:30 ERROR 14028 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'spring.jpa.show-sql' to boolean:
+
+    Property: spring.jpa.show-sql
+    Value: "false  # Disable in production for better performance"
+    Origin: class path resource [application.properties] - 9:21
+    Reason: failed to convert java.lang.String to boolean (caused by java.lang.IllegalArgumentException: Invalid boolean value 'false  # Disable in production for better performance')
+
+Action:
+
+Update your application's configuration
+
+2025-10-30T20:43:57.002+05:30  INFO 14028 --- [restartedMain] c.t.TaskmanagerBackendApplication        : Starting TaskmanagerBackendApplication using Java 25.0.1 with PID 14028 (C:\Users\ajay ramasamy j\Downloads\taskmanager\target\classes started by ajay ramasamy j in C:\Users\ajay ramasamy j\Downloads\taskmanager)
+2025-10-30T20:43:57.002+05:30  INFO 14028 --- [restartedMain] c.t.TaskmanagerBackendApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-10-30T20:43:57.488+05:30  INFO 14028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-30T20:43:57.527+05:30  INFO 14028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 2 JPA repository interfaces.
+2025-10-30T20:43:57.724+05:30  INFO 14028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-30T20:43:57.725+05:30  INFO 14028 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-30T20:43:57.725+05:30  INFO 14028 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-10-30T20:43:57.777+05:30  INFO 14028 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-10-30T20:43:57.778+05:30  INFO 14028 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 772 ms
+2025-10-30T20:43:57.820+05:30 ERROR 14028 --- [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in file [C:\Users\ajay ramasamy j\Downloads\taskmanager\target\classes\com\taskmanager\config\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userService' defined in file [C:\Users\ajay ramasamy j\Downloads\taskmanager\target\classes\com\taskmanager\service\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.taskmanager.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+2025-10-30T20:43:57.822+05:30  INFO 14028 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-10-30T20:43:57.826+05:30  WARN 14028 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2025-10-30T20:43:57.831+05:30  INFO 14028 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-30T20:43:57.837+05:30 ERROR 14028 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'spring.jpa.show-sql' to boolean:
+
+    Property: spring.jpa.show-sql
+    Value: "false  # Disable in production for better performance"
+    Origin: class path resource [application.properties] - 9:21
+    Reason: failed to convert java.lang.String to boolean (caused by java.lang.IllegalArgumentException: Invalid boolean value 'false  # Disable in production for better performance')
+
+Action:
+
+Update your application's configuration
+
