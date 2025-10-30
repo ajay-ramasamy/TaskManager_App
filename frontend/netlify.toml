@@ -1,0 +1,11 @@
+# Create netlify.toml configuration file
+@"
+[build]
+  command = \"npm run build\"
+  publish = \"dist\"
+
+[[redirects]]
+  from = \"/*\"
+  to = \"/index.html\"
+  status = 200
+"@ | Out-File -FilePath netlify.toml -Encoding utf8
