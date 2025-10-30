@@ -1,10 +1,6 @@
-FROM maven:3.8.6-openjdk-17-slim AS build
+FROM openjdk:17
 WORKDIR /app
 COPY . .
-RUN mvn clean package -DskipTests
-
-FROM openjdk:17-slim
-WORKDIR /app
-COPY --from=build /app/target/*.jar app.jar
+RUN chmod +x ./mvnw && ./mvnw clean package -DskipTests
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "app.jar"]
+CMD ["java", "-jar", "target/taskmanager-0.0.1-SNAPSHOT.jar"]
