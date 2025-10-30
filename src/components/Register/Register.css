@@ -1,0 +1,155 @@
+/* Top Menu Styles - Left Aligned */
+.top-menu {
+    background: #1a1a1a;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.menu-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.app-title {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    background: linear-gradient(45deg, #007bff, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Main Register Section */
+.app {
+    min-height: 100vh;
+    background: black;
+}
+
+.main {
+    background: black;
+    min-height: calc(100vh - 80px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main1 {
+    border: 2px solid gray;
+    width: 600px;
+    height: 550px; 
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; 
+    align-items: center;
+}
+
+.container h1 {
+    font-size: 50px;
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.container input {
+    padding: 16px;
+    border-radius: 10px;
+    width: 400px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    background: white;
+}
+
+.button1 {
+    padding: 17px;
+    width: 200px;
+    background: linear-gradient(45deg, #007bff, #00d4ff);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin-top: 0.5rem;
+}
+
+.button1:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(45deg, #0056b3, #0099cc);
+}
+
+.login-text {
+    color: white;
+    font-size: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.login-link {
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.login-link:hover {
+    color: #00d4ff;
+}
+
+.error-message {
+  background: #ff6b6b;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.success-message {
+  background: #51cf66;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
