@@ -54,7 +54,7 @@ public class SecurityConfig {
         configuration.setAllowedOrigins(Arrays.asList(
                 "http://localhost:5173",           // Vite dev server
                 "http://localhost:3000",           // Alternative dev server
-                "https://your-todo-app.netlify.app" // Your Netlify domain - UPDATE THIS
+                "https://taskmanager-app-2-g2o8.onrender.com" // Your render domain - UPDATE THIS
         ));
 
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"));
@@ -96,4 +96,5 @@ public class SecurityConfig {
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
+
 }
