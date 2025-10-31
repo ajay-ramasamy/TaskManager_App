@@ -12,7 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/tasks")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {"https://taskmanager-app-2-g2o8.onrender.com", "http://localhost:5173"})
 public class TaskController {
     private final TaskService taskService;
 
@@ -67,4 +67,5 @@ public class TaskController {
         taskService.deleteTask(taskId, username);
         return ResponseEntity.ok().build();
     }
+
 }
