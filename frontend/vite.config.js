@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:8080',
+        target: 'https://taskmanager-app-w2iz.onrender.com',
         changeOrigin: true,
         secure: false,
       },
