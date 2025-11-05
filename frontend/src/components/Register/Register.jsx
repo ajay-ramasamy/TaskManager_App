@@ -47,7 +47,7 @@ const Register = () => {
     setSuccess("");
 
     try {
-      const response = await fetch("https://taskmanager-app-w2iz.onrender.com", {
+      const response = await fetch("/api/auth/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
