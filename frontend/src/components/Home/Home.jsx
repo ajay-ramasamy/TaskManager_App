@@ -17,7 +17,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   // Use proxy URL - this will be handled by vite.config.js
-  const API_BASE = "https://taskmanager-app-w2iz.onrender.com/api";
+  const API_BASE = "/api";
 
   // Enhanced fetch wrapper with error handling
   const apiFetch = async (url, options = {}) => {
