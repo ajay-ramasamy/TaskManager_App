@@ -34,7 +34,22 @@ public class SecurityConfig {
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/auth/**").permitAll()
+                        .requestMatchers(
+                                "/api/auth/**",
+                                "/",
+                                "/index.html",
+                                "/static/**",
+                                "/css/**",
+                                "/js/**",
+                                "/assets/**",
+                                "/*.ico",
+                                "/*.json",
+                                "/*.png",
+                                "/error",
+                                "/login",
+                                "/register",
+                                "/dashboard"
+                        ).permitAll()
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session
@@ -50,11 +65,12 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
 
-        // Allow both development and production origins
-        configuration.setAllowedOrigins(Arrays.asList(
-                "http://localhost:5173",           // Vite dev server
-                "http://localhost:3000",           // Alternative dev server
-                "https://taskmanager-app-2-g2o8.onrender.com" // Your render domain - UPDATE THIS
+        // Allow all origins in production for Render
+        configuration.setAllowedOriginPatterns(Arrays.asList(
+                "http://localhost:5173",
+                "http://localhost:3000", 
+                "https://taskmanager-app-2-g2o8.onrender.com",
+                "https://*.onrender.com"
         ));
 
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"));
@@ -72,7 +88,7 @@ public class SecurityConfig {
                 "Content-Disposition"
         ));
         configuration.setAllowCredentials(true);
-        configuration.setMaxAge(3600L); // 1 hour cache for preflight requests
+        configuration.setMaxAge(3600L);
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
@@ -96,5 +112,4 @@ public class SecurityConfig {
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
-
 }
