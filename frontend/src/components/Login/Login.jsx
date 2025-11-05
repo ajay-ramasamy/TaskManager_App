@@ -32,7 +32,7 @@ const Login = () => {
     setError("");
 
     try {
-      const response = await fetch("https://taskmanager-app-w2iz.onrender.com", {
+      const response = await fetch("/api/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
